@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import DivideSlider from "./components/DivideSlider";
+import Variants from "./components/Variants";
+import Final from "./components/Final";
+
+const Wrapper = styled(motion.div)`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
 function App() {
+  // 자동으로 돌아가는 코드
+
+  // useEffect(() => {
+  //   let timer = setTimeout(() => {
+  //     setVisible(prev => (prev === 10 ? 1 : prev + 1));
+  //   }, 2000);
+
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, [visible]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      {/* <DivideSlider /> */}
+      {/* <Variants /> */}
+      <Final />
+    </Wrapper>
   );
 }
 
